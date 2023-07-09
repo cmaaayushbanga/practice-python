@@ -1,3 +1,5 @@
+Import turtle
+
 # Create the Sun
 # sun = turtle.Turtle()
 # sun.shape("circle")
