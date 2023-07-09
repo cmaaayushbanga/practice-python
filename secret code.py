@@ -1,14 +1,8 @@
 import random
 
 def encode_word(word):
-    if len(word) >= 3:
-        first_letter = word[0]
-        rest_of_word = word[1:]
-        encoded_word = rest_of_word + first_letter + ''.join(random.choices('abcdefghijklmnopqrstuvwxyz', k=3))
-        encoded_word += ''.join(random.choices('abcdefghijklmnopqrstuvwxyz', k=3))
-        return encoded_word
-    else:
-        return word[::-1]
+    if len(word) > 3:
+        return word[::2]
 
 def decode_word(word):
     if len(word) < 3:
@@ -32,7 +26,7 @@ def main():
     choice = input("Enter 'code' to encode or 'decode' to decode: ")
     message = input("Enter the message: ")
 
-    if choice == 'code':
+    if choice == 'encode':
         encoded_message = encode_message(message)
         print("Encoded message:", encoded_message)
     elif choice == 'decode':
