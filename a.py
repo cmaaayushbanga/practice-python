@@ -105,6 +105,3 @@ print(a.replace("Harry", "John"))
 print(a.split(" "))
 blogHeading = "introduction tO jS"
 print(blogHeading.capitalize())
-
-
-  
